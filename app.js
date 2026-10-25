@@ -1,7 +1,7 @@
 // 콘티 작업실 화면. 영상 폴더의 conti/<영상>.json 을 읽고 쓴다. 어디에 저장하는지는 backend.js 가 정한다.
 // 컷 = 장면 하나 + 사람용 칸(id·plan·memo·status). 컷 하나는 시작 줄(from)부터 다음 컷 앞 줄까지.
-import { EL, KIND, TEXT_EL, base, describe, elText } from "./describe.js?v=2";
-import { DemoBackend, FolderBackend, canPickFolder, detectServer, forgetFolder, recentFolder, rememberFolder } from "./backend.js?v=2";
+import { EL, KIND, TEXT_EL, base, describe, elText } from "./describe.js?v=3";
+import { DemoBackend, FolderBackend, canPickFolder, detectServer, forgetFolder, recentFolder, rememberFolder } from "./backend.js?v=3";
 
 const $ = (s, el = document) => el.querySelector(s);
 const S = {
@@ -379,7 +379,7 @@ function renderCut(cut, i, r) {
     const add = h("div", { class: "row-acts" },
       h("button", { class: "btn small", onclick: () => addMedia(cut, "img") }, "+ 그림 넣기"),
       h("button", { class: "btn small", onclick: () => addMedia(cut, "vid") }, "+ 영상 넣기"),
-      h("button", { class: "btn small", onclick: () => { mutate(() => { (cut.els ||= []).push({ t: "label", text: plain(r.lines[0] ? lineText(r.lines[0]) : "새 글씨").slice(0, 20), pos: [SIZE[shape][0] / 2, SIZE[shape][1] * 0.18], color: "yellow" }); }); S.touched.add(cut.id); rerenderCut(cut); } }, "+ 글씨 넣기"));
+      h("button", { class: "btn small", onclick: () => { mutate(() => { (cut.els ||= []).push({ t: "label", text: plain(r.lines[0] ? lineText(r.lines[0]) : "새 글씨").slice(0, 20).trim(), pos: [SIZE[shape][0] / 2, SIZE[shape][1] * 0.18], color: "yellow" }); }); S.touched.add(cut.id); rerenderCut(cut); } }, "+ 글씨 넣기"));
     card.append(h("div", {}, head, linesBlock(cut, r, drawStage), memo, add));
     return card;
   }
