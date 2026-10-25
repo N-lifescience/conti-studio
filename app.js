@@ -1,7 +1,7 @@
 // 콘티 작업실 화면. 영상 폴더의 conti/<영상>.json 을 읽고 쓴다. 어디에 저장하는지는 backend.js 가 정한다.
 // 컷 = 장면 하나 + 사람용 칸(id·plan·memo·status). 컷 하나는 시작 줄(from)부터 다음 컷 앞 줄까지.
-import { EL, KIND, TEXT_EL, base, describe, elText } from "./describe.js";
-import { DemoBackend, FolderBackend, canPickFolder, detectServer, forgetFolder, recentFolder, rememberFolder } from "./backend.js";
+import { EL, KIND, TEXT_EL, base, describe, elText } from "./describe.js?v=2";
+import { DemoBackend, FolderBackend, canPickFolder, detectServer, forgetFolder, recentFolder, rememberFolder } from "./backend.js?v=2";
 
 const $ = (s, el = document) => el.querySelector(s);
 const S = {
@@ -958,6 +958,12 @@ setInterval(watch, 8000);
     B = await detectServer();
     if (B) return await begin();
     if (new URLSearchParams(location.search).has("demo")) return await openDemo();
+    // 만든 사람 시험용: 내 컴퓨터(127.0.0.1)에서 ?opfs 로 열면 브라우저 안 저장 공간을 폴더처럼 쓴다(고르기 창 없이 폴더 모드 시험)
+    if (location.hostname === "127.0.0.1" && new URLSearchParams(location.search).has("opfs")) {
+      const root = await (await navigator.storage.getDirectory()).getDirectoryHandle("시험 폴더", { create: true });
+      B = await FolderBackend.open(root);
+      return await begin();
+    }
     startScreen();
   } catch (e) {
     $("#main").replaceChildren(h("p", {}, `불러오지 못했어요: ${e.message}`));

@@ -504,7 +504,9 @@ dialog::backdrop { background: rgb(0 0 0 / 0.45); }
 /* ── 교사판: TTS 작업실과 잇기 ── */
 .tts { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 10px 0 4px; padding: 8px 10px; background: var(--sunk); border-radius: 8px; }
 .tts-label { font-size: 14px; font-weight: 700; color: var(--muted); margin-right: 4px; }
-.lines-out { max-height: 40vh; overflow: auto; white-space: pre-wrap; background: var(--sunk); padding: 12px; border-radius: 8px; font-size: 15px; line-height: 1.7; }
+.lines-out { max-height: 40vh; overflow: auto; white-space: pre-wrap; background: var(--sunk); padding: 12px 14px; border-radius: 8px; font-family: var(--font); font-size: 15px; line-height: 1.7; }
+.tts .dict { margin-left: 4px; padding: 8px 4px; font-size: 14px; font-weight: 600; color: var(--accent); }
+#info-body > p:first-child { margin-top: 0; margin-bottom: 16px; }
 .cut-head .playing { color: var(--accent); font-weight: 800; }
 .dlg-body .field input, .dlg-body .field select, .dlg-body .field textarea { width: 100%; }
 #info-body textarea { font: inherit; }
