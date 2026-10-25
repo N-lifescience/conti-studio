@@ -952,6 +952,8 @@ document.addEventListener("visibilitychange", watch);
 setInterval(watch, 8000);
 
 (async () => {
+  const theme = new URLSearchParams(location.search).get("theme"); // ?theme=light|dark 로 밝기 고정
+  if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
   try {
     B = await detectServer();
     if (B) return await begin();
