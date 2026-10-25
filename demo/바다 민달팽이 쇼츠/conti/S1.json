@@ -1,0 +1,307 @@
+{
+ "conti": 1,
+ "id": "S1",
+ "title": "머리만 남았는데 몸이 다시 자랐다",
+ "shape": "wide",
+ "promise": "머리만 남은 민달팽이가 몸을 다시 만드는 날짜(몇 시간·7일·약 20일)를 30초에.",
+ "thumb": "media/p/e-regrown.jpg",
+ "paths": {
+  "script": "script/{id}.json",
+  "timeline": "conti/{id}-timeline.json",
+  "public": "media",
+  "stills": "stills/{id}"
+ },
+ "bgm": [],
+ "lineEdits": {},
+ "cuts": [
+  {
+   "id": "c1",
+   "from": 1,
+   "kind": "photo",
+   "bg": "p/e-open",
+   "els": [],
+   "zoom": "in",
+   "plan": "",
+   "memo": "",
+   "status": "ok"
+  },
+  {
+   "id": "c2",
+   "from": 2,
+   "kind": "photo",
+   "bg": "p/e-regrown",
+   "els": [
+    {
+     "t": "label",
+     "text": "초록색 바다 민달팽이",
+     "pos": [
+      960,
+      160
+     ],
+     "at": 2.1,
+     "color": "yellow",
+     "size": 64
+    }
+   ],
+   "zoom": "in",
+   "plan": "",
+   "memo": "",
+   "status": "ok"
+  },
+  {
+   "id": "c3",
+   "from": 3,
+   "kind": "photo",
+   "bg": "p/e-neck",
+   "els": [
+    {
+     "t": "label",
+     "text": "목의 홈",
+     "pos": [
+      700,
+      170
+     ],
+     "at": 3.2,
+     "color": "yellow",
+     "size": 72
+    },
+    {
+     "t": "arrow",
+     "from": [
+      700,
+      220
+     ],
+     "to": [
+      700,
+      380
+     ],
+     "at": 3.25,
+     "color": "#FFD93B"
+    }
+   ],
+   "zoom": "in",
+   "plan": "",
+   "memo": "",
+   "status": ""
+  },
+  {
+   "id": "c4",
+   "from": 4,
+   "kind": "mascot",
+   "who": "sal-shock",
+   "els": [
+    {
+     "t": "say",
+     "text": "몸통을 통째로\n버리고도 **산다고**?",
+     "pos": [
+      1120,
+      360
+     ],
+     "at": 4.02,
+     "tail": "right",
+     "tone": "yellow",
+     "size": 96
+    }
+   ],
+   "grid": "blue",
+   "plan": "",
+   "memo": "",
+   "status": ""
+  },
+  {
+   "id": "c5",
+   "from": 5,
+   "kind": "photo",
+   "bg": "p/e-head-tank",
+   "els": [
+    {
+     "t": "label",
+     "text": "2021 · 일본 연구진",
+     "pos": [
+      960,
+      160
+     ],
+     "at": 5.1,
+     "color": "black",
+     "size": 58,
+     "box": "white"
+    }
+   ],
+   "zoom": "in",
+   "plan": "",
+   "memo": "",
+   "status": ""
+  },
+  {
+   "id": "c6",
+   "from": 6,
+   "kind": "photo",
+   "bg": "p/e-head-eat",
+   "els": [
+    {
+     "t": "label",
+     "text": "몇 시간 만에 냠냠",
+     "pos": [
+      960,
+      160
+     ],
+     "at": 6.1,
+     "color": "yellow",
+     "size": 72
+    }
+   ],
+   "zoom": "in",
+   "plan": "",
+   "memo": "해조류를 먹는 입 쪽을 더 크게 보여 주세요",
+   "status": "fix"
+  },
+  {
+   "id": "c7",
+   "from": 7,
+   "kind": "mascot",
+   "who": "sal-laugh",
+   "els": [
+    {
+     "t": "say",
+     "text": "밥부터\n**챙겨 먹는구나**!",
+     "pos": [
+      1120,
+      360
+     ],
+     "at": 7.02,
+     "tail": "right",
+     "tone": "yellow",
+     "size": 100
+    }
+   ],
+   "grid": "green",
+   "plan": "",
+   "memo": "",
+   "status": ""
+  },
+  {
+   "id": "c8",
+   "from": 8,
+   "kind": "grid",
+   "grid": "blue",
+   "els": [
+    {
+     "t": "tile",
+     "text": "몇 시간: 먹기 시작",
+     "pos": [
+      440,
+      420
+     ],
+     "at": 8,
+     "glyph": "🌿",
+     "w": 500,
+     "h": 600,
+     "size": 46,
+     "color": "#3FA66B"
+    },
+    {
+     "t": "tile",
+     "text": "7일 안: 심장",
+     "pos": [
+      960,
+      420
+     ],
+     "at": 8.1,
+     "glyph": "🫀",
+     "w": 500,
+     "h": 600,
+     "size": 52,
+     "color": "#FF4436"
+    },
+    {
+     "t": "tile",
+     "text": "약 20일: 몸 전체",
+     "pos": [
+      1480,
+      420
+     ],
+     "at": 9.3,
+     "img": "p/c2-marginata-d.jpg",
+     "color": "#3FA66B",
+     "w": 500,
+     "h": 600,
+     "size": 46
+    }
+   ],
+   "plan": "",
+   "memo": "",
+   "status": ""
+  },
+  {
+   "id": "c10",
+   "from": 10,
+   "kind": "mascot",
+   "who": "sal-sad",
+   "els": [
+    {
+     "t": "say",
+     "text": "다리만 만드는\n**나보다 낫잖아**!",
+     "pos": [
+      1120,
+      360
+     ],
+     "at": 10.02,
+     "tail": "right",
+     "tone": "yellow",
+     "size": 96
+    }
+   ],
+   "grid": "green",
+   "plan": "",
+   "memo": "",
+   "status": ""
+  },
+  {
+   "id": "c11",
+   "from": 11,
+   "kind": "photo",
+   "bg": "p/e-body-pale",
+   "els": [
+    {
+     "t": "label",
+     "text": "버린 몸통: 머리는 끝내 안 생김",
+     "pos": [
+      960,
+      160
+     ],
+     "at": 11.2,
+     "color": "black",
+     "size": 56,
+     "box": "white"
+    }
+   ],
+   "zoom": "in",
+   "plan": "",
+   "memo": "",
+   "status": ""
+  },
+  {
+   "id": "c12",
+   "from": 12,
+   "kind": "photo",
+   "bg": "p/e-stages",
+   "els": [
+    {
+     "t": "label",
+     "text": "다시 자라는 쪽 = 머리",
+     "pos": [
+      960,
+      160
+     ],
+     "at": 12.2,
+     "color": "yellow",
+     "size": 66
+    }
+   ],
+   "zoom": "none",
+   "plan": "",
+   "memo": "",
+   "status": ""
+  }
+ ]
+}

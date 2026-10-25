@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>영상 용어 사전</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='10' width='56' height='44' rx='8' fill='%231f5c4a'/%3E%3Cpath d='M26 22 L44 32 L26 42 Z' fill='%23f0b400'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="terms.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./">콘티 작업실</a>
+    <span class="page-name">영상 용어 사전</span>
+    <div class="find">
+      <input id="q" type="search" placeholder="용어나 느낌으로 찾기 (예: 쫀득, 줌)" aria-label="용어 찾기" autocomplete="off">
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-top">
+      <h1>움직임을 이름으로 부르면 화면이 정확해져요</h1>
+      <p>모션, 카메라 무빙, 애프터이펙트, 편집에서 실제로 쓰는 용어 100개를 <strong>자주 쓰는 순서</strong>로 모았어요. 카드마다 움직이는 예시가 있어요. 원하는 움직임을 찾으면 <strong>메모 문장 복사</strong>를 눌러 콘티 메모에 붙여 넣으세요.</p>
+    </section>
+
+    <section aria-labelledby="h-formula">
+      <h2 id="h-formula">메모는 네 칸으로 쓰면 정확해요</h2>
+      <div class="box">
+        <div class="formula">
+          <div class="part"><b>어느 컷</b><span>c12</span></div>
+          <span class="plus" aria-hidden="true">+</span>
+          <div class="part"><b>무엇을</b><span>바다토끼 사진을</span></div>
+          <span class="plus" aria-hidden="true">+</span>
+          <div class="part"><b>용어</b><span>팝 인, 오버슈트</span></div>
+          <span class="plus" aria-hidden="true">+</span>
+          <div class="part"><b>얼마나</b><span>0.3초, 115%</span></div>
+        </div>
+        <p class="example">c12 바다토끼 사진을 팝 인으로. 0.3초 동안 115%까지 커졌다가 100%로 돌아오게</p>
+        <ul class="tips">
+          <li><b>시간은 초로</b>우리 영상은 1초가 30프레임이에요.</li>
+          <li><b>크기는 퍼센트로</b>지금 크기가 100%예요.</li>
+          <li><b>방향은 출발과 도착으로</b>왼쪽에서 오른쪽, 아래에서 위처럼 말해요.</li>
+          <li><b>세기는 숫자로</b>흔들림은 픽셀, 기울기는 도로 말하면 더 정확해요.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-feels">
+      <h2 id="h-feels">이렇게 말하던 걸 이 용어로</h2>
+      <p class="lead">느낌으로 말하던 표현을 용어로 바꿔 봤어요. 용어를 누르면 그 카드로 가요.</p>
+      <div class="feels" id="feels"></div>
+    </section>
+
+    <section aria-labelledby="h-ranks">
+      <h2 id="h-ranks">한눈에 보는 순위</h2>
+      <p class="lead">위에 있을수록 편집 현장에서 자주 나오는 말이에요.</p>
+      <div class="ranks" id="ranks"></div>
+    </section>
+
+    <section aria-labelledby="h-all">
+      <h2 id="h-all">용어 100개</h2>
+      <div class="controls" id="controls"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <footer class="foot">
+      <h2>순위는 이렇게 정했어요</h2>
+      <p>정확한 통계는 아니에요. 아래 업계 용어집 10곳에 몇 번 실렸는지를 먼저 보고 편집 튜토리얼과 유튜브 편집 지시에서 얼마나 자주 쓰는지를 함께 따져 정했어요. 카드 맨 아래 글자가 그 용어가 실린 용어집이에요. 뜻풀이는 여러 자료를 보고 우리말로 새로 썼어요.</p>
+      <ol id="sources"></ol>
+      <p>조사한 날: 2026년 10월 24일</p>
+    </footer>
+  </main>
+
+  <script type="module" src="terms.js"></script>
+</body>
+</html>

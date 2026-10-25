@@ -1,0 +1,35 @@
+{
+ "projects": {
+  "바다 민달팽이 쇼츠": {
+   "files": [
+    "CREDITS.md",
+    "conti/S1-timeline.json",
+    "conti/S1.json",
+    "media/chars/sal-laugh.png",
+    "media/chars/sal-sad.png",
+    "media/chars/sal-shock.png",
+    "media/p/c2-marginata-d.jpg",
+    "media/p/e-body-pale.jpg",
+    "media/p/e-head-eat.jpg",
+    "media/p/e-head-tank.jpg",
+    "media/p/e-neck.jpg",
+    "media/p/e-open.jpg",
+    "media/p/e-regrown.jpg",
+    "media/p/e-stages.jpg",
+    "script/S1.json",
+    "stills/S1/L001.jpg",
+    "stills/S1/L002.jpg",
+    "stills/S1/L003.jpg",
+    "stills/S1/L004.jpg",
+    "stills/S1/L005.jpg",
+    "stills/S1/L006.jpg",
+    "stills/S1/L007.jpg",
+    "stills/S1/L008.jpg",
+    "stills/S1/L009.jpg",
+    "stills/S1/L010.jpg",
+    "stills/S1/L011.jpg",
+    "stills/S1/L012.jpg"
+   ]
+  }
+ }
+}
