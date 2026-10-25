@@ -1,7 +1,7 @@
 // 콘티 작업실 화면. 영상 폴더의 conti/<영상>.json 을 읽고 쓴다. 어디에 저장하는지는 backend.js 가 정한다.
 // 컷 = 장면 하나 + 사람용 칸(id·plan·memo·status). 컷 하나는 시작 줄(from)부터 다음 컷 앞 줄까지.
-import { EL, KIND, TEXT_EL, base, describe, elText } from "./describe.js?v=3";
-import { DemoBackend, FolderBackend, canPickFolder, detectServer, forgetFolder, recentFolder, rememberFolder } from "./backend.js?v=3";
+import { EL, KIND, TEXT_EL, base, describe, elText } from "./describe.js?v=4";
+import { DemoBackend, FolderBackend, canPickFolder, detectServer, forgetFolder, recentFolder, rememberFolder } from "./backend.js?v=4";
 
 const $ = (s, el = document) => el.querySelector(s);
 const S = {
@@ -454,7 +454,7 @@ function textsBlock(cut, drawStage) {
   });
   if (!rows.length) return null;
   return h("div", { class: "block" }, h("h4", {}, "화면 글씨"), h("div", { class: "texts" }, rows),
-    h("p", { class: "hint" }, "**두 별표** 사이 글자는 강조색으로 보이고, 줄을 바꾸면 화면에서도 줄이 바뀌어요."));
+    h("p", { class: "hint" }, "**두 별표** 사이 글자는 강조색으로 보이고 줄을 바꾸면 화면에서도 줄이 바뀌어요."));
 }
 function textRow(label, value, set, cut, drawStage, key) {
   const id = `t-${cut.id}-${key}`;
@@ -857,7 +857,7 @@ function startScreen(note = "") {
   const main = $("#main");
   main.replaceChildren(h("section", { class: "start" },
     h("h1", {}, "콘티 작업실"),
-    h("p", { class: "lead" }, "수업 영상과 학생 활동 영상을 컷마다 눈으로 보며 고치고, AI에게 넘겨 완성해요."),
+    h("p", { class: "lead" }, "수업 영상과 학생 활동 영상을 컷마다 눈으로 보며 고치고 AI에게 넘겨 완성해요."),
     note ? h("p", { class: "warnbox", role: "status" }, note) : null,
     h("div", { class: "start-acts" },
       h("button", { class: "btn primary big", disabled: !ok, onclick: openFolder }, "내 영상 폴더 열기"),
@@ -865,8 +865,8 @@ function startScreen(note = "") {
     ok ? h("p", { class: "hint", id: "recent" }) : h("p", { class: "hint" }, "폴더 열기는 PC의 크롬·엣지·웨일에서 돼요. 이 브라우저에서는 예시만 볼 수 있어요."),
     h("ol", { class: "steps" },
       h("li", {}, h("b", {}, "대본"), " 대본을 붙여 넣으면 줄마다 컷이 생겨요. AI가 만든 콘티 파일을 열어도 돼요."),
-      h("li", {}, h("b", {}, "콘티 확인"), " 컷마다 그림·영상·화면 글씨를 보고 고치고, 고칠 점을 메모로 남겨요."),
-      h("li", {}, h("b", {}, "나레이션 녹음"), " 대사를 TTS 작업실로 보내 내 목소리로 녹음하고, 그 결과로 컷 시각을 맞춰요."),
+      h("li", {}, h("b", {}, "콘티 확인"), " 컷마다 그림과 영상, 화면 글씨를 보며 고치고 고칠 점은 메모로 남겨요."),
+      h("li", {}, h("b", {}, "나레이션 녹음"), " 대사를 TTS 작업실로 보내 내 목소리로 녹음하고 그 결과로 컷 시각을 맞춰요."),
       h("li", {}, h("b", {}, "영상 만들기"), " 「AI에게 넘기기」의 글을 쓰던 AI에게 보내면 콘티대로 영상을 만들어요.")),
     h("p", { class: "privacy" }, "파일은 선생님 컴퓨터 밖으로 나가지 않아요. 이 페이지는 아무것도 서버로 보내지 않아요. ",
       h("a", { href: "privacy.html" }, "개인정보 안내"), " · ", h("a", { href: GUIDE_PAGE, target: "_blank", rel: "noopener" }, "AI용 안내(AI-GUIDE)"))));
